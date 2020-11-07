@@ -1,0 +1,7 @@
+{
+  "name": "bookaHotel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
