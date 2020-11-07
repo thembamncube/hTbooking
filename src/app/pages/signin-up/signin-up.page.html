@@ -1,0 +1,44 @@
+
+
+<ion-content>
+  <div class="wrapper">
+    <div class="holder">
+      <div id="head" class="signup">
+  <div onclick="swap(this);" data-tab="login" class="login-tab">Login</div>
+  <div onclick="swap(this);" data-tab="signup" class="signup-tab">signup</div>
+      </div>
+      <div class="body" id="form-body">
+        <div class="login">
+          <div class="form-row">
+            <ion-item>
+              <ion-label position="floating"  >Email</ion-label>
+              <ion-input type="text" #email></ion-input>
+            </ion-item>
+      
+            <ion-item>
+              <ion-label position="floating"  >Password</ion-label>
+              <ion-input  type="text" #password></ion-input>
+            </ion-item>
+
+            <ion-button href = "/home-screen"style="--background: #ccc"  >Log In</ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    function swap(referTo){
+      if(referTo.getAttribute("data-tab")=="login"){
+        document.getElementById('form-body')
+        .classList.remove('active');
+        referTo.parentNode.classList.remove('signup');
+      }
+      else{
+        document.getElementById('form-body')
+        .classList.add('active');
+        referTo.parentNode.classList.remove('signup');
+      }
+    }
+  </script>
+</ion-content>
