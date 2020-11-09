@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import {Product} from '../../models/product';
+import {ProductService} from '../../services/product.service'
 
 @Component({
   selector: 'app-home-screen',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeScreenPage implements OnInit {
 
-  constructor() { }
+
+  constructor(private itemService: ProductService) { }
+  public items: Observable<Product[]>;
 
   ngOnInit() {
+    this.items = this.itemService.getItes();
   }
 
 }

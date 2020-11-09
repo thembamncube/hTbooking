@@ -5,24 +5,46 @@
 </ion-header> -->
 
 <ion-content>
-  <div class="wrapper">
-    <div class="top">
-      <p>Search For a Hotel </p>
-      <ion-searchbar></ion-searchbar>
-</div>
-<div class=""></div>
-    <ion-item>
-      <div class="img" style="width: 100px; ">
-        <img src="assets/LAMP.jpg">
+  <!-- <div class="wrapper">
+    <div class="bottom">
+      <div class="top">
+        <p>Search For a Hotel </p>
+        <ion-searchbar></ion-searchbar>
       </div>
-
-
-      <ion-label>
-        <h2>Finn</h2>
-        <h3>I'm a big deal</h3>
-        <p>Listen, I've had a pretty messed up day...</p>
-      </ion-label>
-    </ion-item>
-  </div>
-  <div class="bottom"></div>
+      <ion-card>
+        <img src="assets/LAMP.jpg"/>
+        <div class="card-title">São Paulo</div>
+        <div class="card-subtitle">41 Listings</div>
+      </ion-card>
+      <ion-card>
+        <img src="assets/LAMP.jpg"/>
+        <div class="card-title">São Paulo</div>
+        <div class="card-subtitle">41 Listings</div>
+      </ion-card>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button href="/view-choice">
+          <ion-icon name="arrow-forward-circle"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+  
+  </div> -->
+  <!--  grid view -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let list of items | async" [routerLink]="'/view-item/'+list.id" class="product">
+          <img src="{{list.imgUrl}}" > 
+        <ion-item lines="none">
+          <ion-label>
+            <h2 class="name" style="color: #0A0A2A;">
+              {{list.name}}
+            </h2>
+            <p style="color: rgba(201, 38, 38, 0.486);">
+              Price: {{list.price | currency: 'ZAR'}}
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,9 +1,47 @@
-<ion-header>
+<ion-header style="background-color: black;">
   <ion-toolbar>
-    <ion-title>view-choice</ion-title>
+    <ion-title>name of Hotel</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<!-- <div id="holder">
+  <div class="imgView">
+    <img style="height: 100%; width: 100%;" src="assets/LAMP.jpg"/>
+  </div>
+    
+  
+<div class="bottom">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+    <ion-button style="width: 50%;--background:#19D9FE"  href="/booking">Book now</ion-button>
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+  <div class="button">
+    
+  </div>
+  
+</div>
 
+</div> -->
+<ion-card>
+  <!-- <img src="{{item.imgUrl}}" /> -->
+  <ion-card-header>
+    <ion-card-subtitle>{{product.name}}</ion-card-subtitle>
+    <ion-card-title>{{product.price}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{product.description}}
+  </ion-card-content>
+  <!-- <ion-card-header>
+    <ion-button backround-color="#0A0A2A" [routerLink]="'/edit-item/' + item.id">Update</ion-button>
+    <ion-button back-groundcolor="#0A0A2A" (click)="delete_item()">Delete</ion-button>
+  </ion-card-header> -->
+</ion-card>
 </ion-content>

@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'signin-up',
+    redirectTo: 'signin-user',
     pathMatch: 'full'
   },
   
@@ -17,14 +17,45 @@ const routes: Routes = [
     path: 'view-choice',
     loadChildren: () => import('./pages/view-choice/view-choice.module').then( m => m.ViewChoicePageModule)
   },
+  
+  
   {
-    path: 'signin-up',
-    loadChildren: () => import('./pages/signin-up/signin-up.module').then( m => m.SigninUpPageModule)
+    path: 'booking',
+    loadChildren: () => import('./pages/booking/booking.module').then( m => m.BookingPageModule)
   },
   {
-    path: 'partnerin-up',
-    loadChildren: () => import('./pages/partnerin-up/partnerin-up.module').then( m => m.PartnerinUpPageModule)
+    path: 'dashboard',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'signin-user',
+    loadChildren: () => import('./pages/signin-user/signin-user.module').then( m => m.SigninUserPageModule)
+  },
+  {
+    path: 'register-user',
+    loadChildren: () => import('./pages/register-user/register-user.module').then( m => m.RegisterUserPageModule)
+  },
+  {
+    path: 'register-client',
+    loadChildren: () => import('./pages/register-client/register-client.module').then( m => m.RegisterClientPageModule)
+  },
+  {
+    path: 'signin-client',
+    loadChildren: () => import('./pages/signin-client/signin-client.module').then( m => m.SigninClientPageModule)
+  },  {
+    path: 'addproduct',
+    loadChildren: () => import('./pages/addproduct/addproduct.module').then( m => m.AddproductPageModule)
+  },
+  {
+    path: 'addproduclear',
+    loadChildren: () => import('./pages/addproduclear/addproduclear.module').then( m => m.AddproduclearPageModule)
+  },
+
+
 ];
 
 @NgModule({
